@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     let botEmbed = new Discord.RichEmbed()
 
     .setDescription("Echo Studios Youtube")
-    .setAuthor("Echo Bot: By Vixel")
+    .setAuthor("Echo Bot: By Echo Studios")
     .setColor("#003182")
     .addField("Youtube Channel", "https://www.youtube.com/channel/UCCk2MfTdmPu9FDm6PW0qh0g")
     .setThumbnail(bicon)
@@ -15,4 +15,5 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
   name: "youtube"
+  category: "links"
 }
