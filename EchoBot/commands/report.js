@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         reportschannel.send(reportEmbed);
 
         return;
-    
+
 }
 
 module.exports.help = {

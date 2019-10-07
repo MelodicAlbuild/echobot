@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
         message.delete().catch(O_o=>{});
-        if(!message.member.roles.has("597220062675337226")) return message.channel.send("You need to have the Admin Rank for this!").then(msg => {msg.delete(3000)});
+        if(!message.member.hasPermission("2")) return message.channel.send("You need to be able to kick members for this!").then(msg => {msg.delete(3000)});
         let removeuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!removeuser) return message.channel.send("You did not supply a Reason.").then(msg => {msg.delete(3000)});
         let removereason = args.join(" ").slice(22);
