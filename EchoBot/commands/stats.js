@@ -25,3 +25,8 @@ let embed = new Discord.RichEmbed()
 message.channel.send({embed});
 message.delete()
 }
+
+module.exports.help = {
+  name: "stats"
+  category: "info"
+}
