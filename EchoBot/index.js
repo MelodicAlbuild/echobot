@@ -31,6 +31,38 @@ console.log(`Bot started in Beta Mode: ${client.guilds.size} Guilds, ${client.ch
 
 });
 
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
+});
+
+client.on('message', async message => {
+
+  let prefixes = JSON.parse(fs.readFileSync("./storage/prefixes.json", "utf8"));
+
+  if(message.guild === null){
+    if(message.author.id != "562836708564140043") {
+      let dmauthor = message.author;
+      let dmmessage = message.content;
+      let dmembed = new Discord.RichEmbed()
+      .setDescription("Incoming Dm Support Request")
+      .setColor("#00ffff")
+      .addField("Author", message.author.username)
+      .addField("Author ID", message.author.id)
+      .addField("Support Message", dmmessage);
+      return client.channels.get("617878876680355871").send(dmembed), dmauthor.send("The Staff of DefiantVideos has been Notified of your Issue, They will reply here shortly!");
+    }
+  } else if(!prefixes[message.guild.id]) {
+    prefixes[message.guild.id] = {
+      prefixes: config.prefix
+    };
+
+  }
+
   const prefix = prefixes[message.guild.id].prefixes;
 
   const language = "eng"
@@ -68,16 +100,10 @@ console.log(`Bot started in Beta Mode: ${client.guilds.size} Guilds, ${client.ch
     try {
         let commandFile = require(`./commands/${cmd}.js`);
         commandFile.run(client, message, args, prefix, language, beta)
-    } catch (e) {
-      console.log(e)
-    }
-
-
-
-
-
+    } catch (err) {
+      console.log(err)
+    };
 });
-
 
 client.on('error', console.error);
 
