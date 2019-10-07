@@ -37,4 +37,5 @@ message.channel.send(`The Member ${member} got muted!`)
 
 module.exports.help = {
   name: "mute"
+  category: "moderation"
 }
