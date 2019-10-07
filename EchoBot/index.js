@@ -21,7 +21,7 @@ console.log(`Bot started in Beta Mode: ${client.guilds.size} Guilds, ${client.ch
 
   if (!beta) {
     //main activity
-    client.user.setActivity('EchoBot Designed by Vixel', { type: 'PLAYING' },);
+    client.user.setActivity('EchoBot Designed by Echo Studios', { type: 'PLAYING' },);
     client.user.setStatus('online')
   } else {
     //beta activity
