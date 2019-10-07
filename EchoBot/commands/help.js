@@ -18,4 +18,5 @@ let dmauth = message.author;
 
 module.exports.help = {
   name: "help"
+  category: "moderation"
 }
