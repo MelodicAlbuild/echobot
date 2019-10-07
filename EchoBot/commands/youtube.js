@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
     .setDescription("Echo Studios Youtube")
     .setAuthor("Echo Bot: By Echo Studios")
-    .setColor("#003182")
+    .setColor("#28a18f")
     .addField("Youtube Channel", "https://www.youtube.com/channel/UCCk2MfTdmPu9FDm6PW0qh0g")
     .setThumbnail(bicon)
 
