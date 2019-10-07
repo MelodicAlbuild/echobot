@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let botEmbed = new Discord.RichEmbed()
 
     .setDescription("Bot Information")
-    .setAuthor("Created By: Lord Bidoof!")
+    .setAuthor("Created By: Echo Studios!")
     .setColor("#003182")
     .addField("Bot Name", bot.user.username)
     .setThumbnail(bicon)
