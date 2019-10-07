@@ -21,3 +21,8 @@ module.exports.run = async (bot, message, args) => {
     member.removeRole(muterole).catch(console.error);
     message.channel.send(`The Member ${member} got unmuted!`)
     }
+
+module.exports.help = {
+  name: "unmute"
+  category: "moderation"
+}
