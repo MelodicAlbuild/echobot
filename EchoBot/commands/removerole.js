@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 //RIP to <@${rMember.id}>, We removed ${gRole.name} from them. We tried to DM them, but their DMs are locked.
 
 //RIP, you lost the ${gRole.name} role.
-
 module.exports.help = {
   name: "removerole"
+  category: "moderation"
 }
