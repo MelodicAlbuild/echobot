@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
     let botEmbed = new Discord.RichEmbed()
 
     .setDescription("Echo Studios Twitter")
-    .setAuthor("Echo Bot: By Vixel")
+    .setAuthor("Echo Bot: By Echo Studios")
     .setColor("#28a18f")
     .addField("Twitter Handle", "https://twitter.com/echostudios1")
     .setThumbnail(bicon)
@@ -15,4 +15,5 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
   name: "twitter"
+  category: "links"
 }
