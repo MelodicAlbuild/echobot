@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
-    let botEmbed = new Discord.RichEmbed()
+    let botEmbeds = new Discord.RichEmbed()
 
     .setDescription("Bot Information")
     .setAuthor("Created By: Echo Studios!")
@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .setThumbnail(bicon)
     .addField("Created On", bot.user.createdAt)
 
-    return message.channel.send(botEmbed);
+    return message.channel.send(botEmbeds);
 }
 
 module.exports.help = {
